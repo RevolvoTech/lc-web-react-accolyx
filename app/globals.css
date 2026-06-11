@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Pliant:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --paper: #f7f7f4;
+  --surface: #ffffff;
+  --ink: #09090b;
+  --muted: #5f6670;
+  --line: #dbdbd2;
+  --line-strong: #c7c7bd;
+  --brand: #2a22f4;
+  --sage: #0f766e;
+  --font-display: "Pliant", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand), white 34%);
+  outline-offset: 4px;
+}
+
+.siteHeader {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 26px 24px;
+  width: 100%;
+}
+
+.brand {
+  align-items: center;
+  color: var(--ink);
+  display: inline-flex;
+  gap: 12px;
+  min-height: 48px;
+}
+
+.brandMark {
+  display: inline-block;
+  height: 38px;
+  position: relative;
+  width: 52px;
+}
+
+.brandSlash {
+  background: var(--brand);
+  border-radius: 999px;
+  display: block;
+  height: 42px;
+  left: 8px;
+  position: absolute;
+  top: -2px;
+  transform: rotate(31deg);
+  width: 18px;
+}
+
+.brandDot {
+  background: var(--brand);
+  border-radius: 999px;
+  bottom: 1px;
+  display: block;
+  height: 23px;
+  position: absolute;
+  right: 5px;
+  width: 23px;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.navLinks {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.navLinks a,
+.secondaryAction {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.94rem;
+  font-weight: 600;
+  padding: 10px 14px;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.navLinks a:hover,
+.secondaryAction:hover {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.hero {
+  align-items: center;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(247, 247, 244, 0.88) 0%,
+      rgba(247, 247, 244, 0.78) 42%,
+      rgba(247, 247, 244, 0.96) 100%
+    ),
+    url("/images/finance-workspace.png") center / cover;
+  display: grid;
+  min-height: min(720px, calc(100svh - 160px));
+  padding: 34px 24px 64px;
+}
+
+.heroInner {
+  margin: 0 auto;
+  max-width: 860px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--sage);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3.1rem, 8vw, 7.5rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.96;
+  margin-bottom: 26px;
+}
+
+.heroCopy {
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.65;
+  margin: 0 auto 32px;
+  max-width: 740px;
+}
+
+.heroActions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.focusList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  list-style: none;
+  margin: 28px auto 0;
+  max-width: 680px;
+  padding: 0;
+}
+
+.focusList li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.primaryAction,
+.secondaryAction {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  min-height: 46px;
+}
+
+.primaryAction {
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  color: white;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  justify-content: center;
+  padding: 12px 18px;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.primaryAction:hover {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+.servicesSection,
+.contactSection {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 88px 24px;
+}
+
+.sectionIntro {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(140px, 0.35fr) 1fr;
+  margin-bottom: 34px;
+}
+
+.sectionIntro h2,
+.contactSection h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.04;
+  margin-bottom: 0;
+  max-width: 760px;
+}
+
+.serviceGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.serviceCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  min-height: 210px;
+  overflow: hidden;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.serviceCard:hover {
+  border-color: var(--line-strong);
+  box-shadow: 0 18px 50px rgba(9, 9, 11, 0.08);
+  transform: translateY(-2px);
+}
+
+.serviceCard:nth-child(4),
+.serviceCard:nth-child(5) {
+  grid-column: span 3;
+}
+
+.serviceImage {
+  aspect-ratio: 1.28;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.serviceCard:nth-child(2) .serviceImage {
+  object-position: 58% center;
+}
+
+.serviceBody {
+  padding: 24px 22px 26px;
+}
+
+.serviceCard h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.serviceCard p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.serviceDetails {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 18px 0 0;
+}
+
+.serviceDetails li {
+  align-items: center;
+  display: flex;
+  font-size: 0.92rem;
+  gap: 8px;
+}
+
+.serviceDetails li::before {
+  background: var(--sage);
+  border-radius: 999px;
+  content: "";
+  flex: 0 0 auto;
+  height: 6px;
+  width: 6px;
+}
+
+.approachStrip {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 34px;
+  padding-top: 24px;
+}
+
+.approachStrip p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.approachStrip p::before {
+  background: var(--brand);
+  border-radius: 999px;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  margin-right: 10px;
+  width: 8px;
+}
+
+.contactSection {
+  align-items: start;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.62fr);
+}
+
+.contactCopy p:last-child {
+  color: var(--muted);
+  margin: 18px 0 0;
+  max-width: 520px;
+}
+
+.contactForm {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  box-shadow: 0 18px 50px rgba(9, 9, 11, 0.06);
+}
+
+.contactForm label {
+  display: grid;
+  gap: 7px;
+}
+
+.contactForm span {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.contactForm input,
+.contactForm textarea {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font: inherit;
+  min-height: 46px;
+  padding: 11px 12px;
+  width: 100%;
+}
+
+.contactForm textarea {
+  min-height: 116px;
+  resize: vertical;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: var(--brand);
+  outline: 3px solid color-mix(in srgb, var(--brand), white 74%);
+}
+
+.contactForm .primaryAction {
+  border-radius: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .siteHeader {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .brand {
+    gap: 9px;
+    min-height: 42px;
+  }
+
+  .brandMark {
+    height: 31px;
+    width: 41px;
+  }
+
+  .brandSlash {
+    height: 34px;
+    left: 6px;
+    width: 15px;
+  }
+
+  .brandDot {
+    height: 19px;
+    right: 3px;
+    width: 19px;
+  }
+
+  .brandName {
+    font-size: 1.55rem;
+  }
+
+  .navLinks {
+    gap: 4px;
+  }
+
+  .navLinks a {
+    padding: 9px 10px;
+  }
+
+  .hero {
+    min-height: min(640px, calc(100svh - 132px));
+    padding: 38px 18px 54px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 17vw, 4.8rem);
+  }
+
+  .heroActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .focusList {
+    justify-content: flex-start;
+  }
+
+  .primaryAction,
+  .secondaryAction {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .servicesSection,
+  .contactSection {
+    padding: 64px 18px;
+  }
+
+  .sectionIntro,
+  .approachStrip,
+  .contactSection {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionIntro {
+    display: block;
+  }
+
+  .serviceGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard,
+  .serviceCard:nth-child(4),
+  .serviceCard:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .contactSection {
+    align-items: stretch;
+  }
+}
