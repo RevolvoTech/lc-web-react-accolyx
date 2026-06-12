@@ -54,10 +54,12 @@ export default function Home() {
     <main>
       <header className="siteHeader" aria-label="Main navigation">
         <a className="brand" href="#top" aria-label="Accolyx home">
-          <span className="brandMark" aria-hidden="true">
-            <span className="brandSlash" />
-            <span className="brandDot" />
-          </span>
+          <img
+            className="brandLogo"
+            src="/brand/accolyx-mark.svg"
+            alt=""
+            aria-hidden="true"
+          />
           <span className="brandName">accolyx</span>
         </a>
         <nav className="navLinks" aria-label="Page sections">
