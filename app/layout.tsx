@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Accolyx | Accounting and Advisory Services",
+  title: "Accolyx | Accounting, Audit & Advisory",
   description:
-    "Accounting and advisory services for IFRS reporting, internal audit, IT audit, cyber security, controls, and finance operations.",
+    "Focused accounting, IFRS, advisory, internal audit, IT audit, and cyber security support for clearer financial decisions.",
 };
 
 export default function RootLayout({

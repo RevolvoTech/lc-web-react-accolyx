@@ -5,3 +5,5 @@ out
 dist
 *.log
 .env*
+playwright-report
+test-results
