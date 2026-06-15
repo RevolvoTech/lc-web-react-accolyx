@@ -10,6 +10,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import ContactForm from "./contact-form";
+import { absoluteUrl, siteConfig } from "./seo";
 
 const services = [
   {
@@ -85,9 +86,80 @@ const approach = [
   },
 ];
 
+const organizationId = absoluteUrl("/#organization");
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": organizationId,
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl(siteConfig.logoPath),
+        width: 512,
+        height: 512,
+      },
+      image: absoluteUrl(siteConfig.logoPath),
+      email: siteConfig.email,
+      description: siteConfig.description,
+    },
+    {
+      "@type": "WebSite",
+      "@id": absoluteUrl("/#website"),
+      name: siteConfig.name,
+      url: siteConfig.url,
+      description: siteConfig.description,
+      inLanguage: "en",
+      publisher: {
+        "@id": organizationId,
+      },
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": absoluteUrl("/#professional-service"),
+      name: siteConfig.name,
+      url: siteConfig.url,
+      image: absoluteUrl(siteConfig.logoPath),
+      logo: absoluteUrl(siteConfig.logoPath),
+      email: siteConfig.email,
+      description: siteConfig.description,
+      knowsAbout: siteConfig.keywords,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Accolyx services",
+        itemListElement: siteConfig.services.map((service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.name,
+            description: service.description,
+            serviceType: service.name,
+            provider: {
+              "@id": organizationId,
+            },
+          },
+        })),
+      },
+    },
+  ],
+};
+
+const structuredDataJson = JSON.stringify(structuredData).replace(
+  /</g,
+  "\\u003c",
+);
+
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+      />
+
       <header className="siteHeader" aria-label="Main navigation">
         <div className="headerInner">
           <a className="brand" href="#top" aria-label="Accolyx home">
