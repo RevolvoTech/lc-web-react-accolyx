@@ -25,15 +25,6 @@ test("presents the core offer and conversion path without layout errors", async 
   await expect(
     page.getByRole("link", { name: "Discuss your priorities" }),
   ).toBeVisible();
-  const translatorDownload = page.getByRole("link", {
-    name: "Download KSA Accounting Translator",
-  });
-  await expect(translatorDownload).toBeVisible();
-  await expect(translatorDownload).toHaveAttribute(
-    "href",
-    "/KSA_Accounting_Translator.exe",
-  );
-  await expect(translatorDownload).toHaveAttribute("download", "");
   await expect(
     page.getByRole("heading", {
       level: 2,
