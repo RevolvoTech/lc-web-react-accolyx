@@ -5,6 +5,7 @@ import {
   BarChart3,
   Calculator,
   Check,
+  Download,
   FileCheck2,
   LockKeyhole,
   ShieldCheck,
@@ -212,6 +213,14 @@ export default function Home() {
           <div className="heroActions" aria-label="Primary actions">
             <a
               className="button buttonLight"
+              href="/KSA_Accounting_Translator.exe"
+              download
+            >
+              Download KSA Accounting Translator
+              <Download aria-hidden="true" size={18} strokeWidth={2} />
+            </a>
+            <a
+              className="button buttonGhost"
               href="mailto:info@accolyx.com?subject=Accounting%20and%20advisory%20enquiry"
             >
               Discuss your priorities
