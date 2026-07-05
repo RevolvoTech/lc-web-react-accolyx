@@ -519,6 +519,95 @@ h2 {
   border-color: var(--brand);
 }
 
+.ifrs18Band {
+  background: #f8f8f5;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 78px;
+}
+
+.ifrs18Section {
+  align-items: start;
+  display: grid;
+  gap: 72px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.ifrs18Intro {
+  align-self: center;
+}
+
+.ifrs18Intro .sectionLead {
+  margin-top: 28px;
+}
+
+.ifrs18Facts {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 36px 0 32px;
+}
+
+.ifrs18Facts article {
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+}
+
+.ifrs18Facts span {
+  color: var(--brand);
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ifrs18Facts p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 9px 0 0;
+}
+
+.ifrs18Button {
+  background: var(--ink);
+  color: white;
+}
+
+.ifrs18Button:hover {
+  background: var(--brand);
+  color: white;
+}
+
+.ifrs18Cards {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ifrs18Card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  min-height: 235px;
+  padding: 26px;
+}
+
+.ifrs18Card .itemNumber {
+  color: var(--brand);
+  margin-bottom: 40px;
+}
+
+.ifrs18Card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 11px;
+}
+
+.ifrs18Card p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
 .approachSection {
   align-items: stretch;
   display: grid;
@@ -766,6 +855,11 @@ h2 {
     grid-template-columns: 0.85fr 1fr;
   }
 
+  .ifrs18Section {
+    gap: 48px;
+    grid-template-columns: 1fr;
+  }
+
   .approachVisual {
     min-height: 650px;
   }
@@ -904,6 +998,23 @@ h2 {
   .approachSection,
   .contactSection {
     grid-template-columns: 1fr;
+  }
+
+  .ifrs18Facts,
+  .ifrs18Cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ifrs18Card {
+    min-height: auto;
+  }
+
+  .ifrs18Card .itemNumber {
+    margin-bottom: 24px;
+  }
+
+  .ifrs18Button {
+    width: 100%;
   }
 
   .approachSection {

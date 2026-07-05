@@ -22,9 +22,9 @@ const services = [
   },
   {
     number: "02",
-    title: "IFRS",
-    copy: "Navigate complex reporting requirements with clear technical positions and well-prepared financial statements.",
-    details: ["Technical accounting", "Disclosure support", "Statement preparation"],
+    title: "IFRS & IFRS 18",
+    copy: "Navigate SOCPA-endorsed IFRS requirements with clear technical positions, transition planning, and well-prepared financial statements.",
+    details: ["IFRS 18 readiness", "SOCPA-endorsed IFRS", "Disclosure support"],
     icon: FileCheck2,
   },
   {
@@ -58,8 +58,8 @@ const outcomes = [
   },
   {
     number: "02",
-    title: "Stay reporting-ready",
-    copy: "Technical accounting and documentation prepared with standards, scrutiny, and deadlines in mind.",
+    title: "Stay IFRS-ready",
+    copy: "Technical accounting and documentation prepared for SOCPA-endorsed IFRS, IFRS 18 transition, scrutiny, and deadlines.",
   },
   {
     number: "03",
@@ -86,7 +86,27 @@ const approach = [
   },
 ];
 
+const ksaIfrs18Focus = [
+  {
+    title: "Transition assessment",
+    copy: "Review current statement presentation, subtotals, line items, and disclosure gaps against IFRS 18 requirements.",
+  },
+  {
+    title: "Statement presentation",
+    copy: "Prepare the finance team for IFRS 18 profit or loss categories, defined subtotals, and clearer performance reporting.",
+  },
+  {
+    title: "MPM disclosures",
+    copy: "Document management-defined performance measures, reconciliations, and controls before year-end reporting pressure builds.",
+  },
+  {
+    title: "Saudi context",
+    copy: "Align IFRS 18 work with SOCPA-endorsed IFRS expectations for businesses operating in the Kingdom of Saudi Arabia.",
+  },
+];
+
 const organizationId = absoluteUrl("/#organization");
+const websiteId = absoluteUrl("/#website");
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -105,17 +125,40 @@ const structuredData = {
       image: absoluteUrl(siteConfig.logoPath),
       email: siteConfig.email,
       description: siteConfig.description,
+      areaServed: {
+        "@type": "Country",
+        name: "Saudi Arabia",
+      },
     },
     {
       "@type": "WebSite",
-      "@id": absoluteUrl("/#website"),
+      "@id": websiteId,
       name: siteConfig.name,
       url: siteConfig.url,
       description: siteConfig.description,
-      inLanguage: "en",
+      inLanguage: "en-SA",
       publisher: {
         "@id": organizationId,
       },
+    },
+    {
+      "@type": "WebPage",
+      "@id": absoluteUrl("/#webpage"),
+      url: siteConfig.url,
+      name: siteConfig.title,
+      description: siteConfig.description,
+      inLanguage: "en-SA",
+      isPartOf: {
+        "@id": websiteId,
+      },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/images/finance-workspace.png"),
+      },
+      about: siteConfig.keywords.map((keyword) => ({
+        "@type": "Thing",
+        name: keyword,
+      })),
     },
     {
       "@type": "ProfessionalService",
@@ -127,6 +170,10 @@ const structuredData = {
       email: siteConfig.email,
       description: siteConfig.description,
       knowsAbout: siteConfig.keywords,
+      areaServed: {
+        "@type": "Country",
+        name: "Saudi Arabia",
+      },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Accolyx services",
@@ -174,6 +221,7 @@ export default function Home() {
 
           <nav className="navLinks" aria-label="Page sections">
             <a href="#services">Services</a>
+            <a href="#ifrs18">IFRS 18</a>
             <a href="#approach">Approach</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -199,15 +247,16 @@ export default function Home() {
         />
         <div className="heroShade" aria-hidden="true" />
         <div className="heroInner">
-          <p className="eyebrow eyebrowLight">Accounting, audit & advisory</p>
+          <p className="eyebrow eyebrowLight">KSA accounting, IFRS 18 & advisory</p>
           <h1 id="hero-title">
-            Financial clarity
+            KSA IFRS 18 readiness
             <span> built for action.</span>
           </h1>
           <p className="heroCopy">
-            Accolyx helps businesses strengthen accounting, reporting,
-            controls, and technology risk with focused support shaped around
-            the way they operate.
+            Accolyx helps businesses in Saudi Arabia strengthen
+            SOCPA-endorsed IFRS reporting, IFRS 18 transition plans, controls,
+            and technology risk with focused support shaped around the way they
+            operate.
           </p>
           <div className="heroActions" aria-label="Primary actions">
             <a
@@ -224,19 +273,19 @@ export default function Home() {
           </div>
         </div>
         <div className="heroFoot">
-          <span>Finance</span>
-          <span>Reporting</span>
+          <span>KSA</span>
+          <span>IFRS 18</span>
+          <span>SOCPA-endorsed IFRS</span>
           <span>Controls</span>
-          <span>Technology risk</span>
         </div>
       </section>
 
       <section className="capabilityBar" aria-label="Core capabilities">
         <div className="capabilityInner">
-          <p>Specialist support across</p>
+          <p>Specialist support for Saudi Arabia</p>
           <ul>
+            <li>KSA IFRS 18</li>
             <li>Accounting</li>
-            <li>IFRS</li>
             <li>Internal audit</li>
             <li>Cyber security</li>
           </ul>
@@ -251,7 +300,8 @@ export default function Home() {
           </div>
           <p className="sectionLead">
             The goal is not more complexity. It is dependable information,
-            stronger control, and a clearer basis for the next decision.
+            stronger control, and a clearer basis for the next decision in KSA
+            reporting environments.
           </p>
         </div>
 
@@ -315,6 +365,53 @@ export default function Home() {
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="ifrs18Band" id="ifrs18" aria-labelledby="ifrs18-title">
+        <div className="sectionShell ifrs18Section">
+          <div className="ifrs18Intro">
+            <p className="eyebrow">KSA IFRS 18 readiness</p>
+            <h2 id="ifrs18-title">
+              Prepare Saudi financial statements for IFRS 18.
+            </h2>
+            <p className="sectionLead">
+              SOCPA has adopted IFRS 18 for implementation in Saudi Arabia.
+              The standard applies to annual reporting periods beginning on or
+              after 1 January 2027, with earlier application permitted.
+            </p>
+
+            <div className="ifrs18Facts" aria-label="IFRS 18 timing for Saudi Arabia">
+              <article>
+                <span>Saudi adoption</span>
+                <p>SOCPA adoption supports IFRS 18 implementation in the Kingdom.</p>
+              </article>
+              <article>
+                <span>Readiness window</span>
+                <p>Finance teams can assess statement presentation and disclosures before 2027 reporting.</p>
+              </article>
+            </div>
+
+            <a
+              className="button ifrs18Button"
+              href="mailto:info@accolyx.com?subject=KSA%20IFRS%2018%20readiness"
+            >
+              Discuss IFRS 18 readiness
+              <ArrowUpRight aria-hidden="true" size={18} strokeWidth={2} />
+            </a>
+          </div>
+
+          <div className="ifrs18Cards" aria-label="KSA IFRS 18 support areas">
+            {ksaIfrs18Focus.map((item, index) => (
+              <article className="ifrs18Card" key={item.title}>
+                <span className="itemNumber">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -392,7 +489,7 @@ export default function Home() {
             />
             <span className="brandName">accolyx</span>
           </a>
-          <p>Accounting, audit, advisory, and technology risk.</p>
+          <p>KSA IFRS 18, accounting, audit, advisory, and technology risk.</p>
           <p>© {new Date().getFullYear()} Accolyx.</p>
         </div>
       </footer>
