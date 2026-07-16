@@ -6,7 +6,6 @@ import { Send } from "lucide-react";
 const serviceOptions = [
   "Accounting",
   "IFRS",
-  "KSA IFRS 18 readiness",
   "Advisory",
   "Internal Audit",
   "IT Audit & Cyber Security",

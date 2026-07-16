@@ -6,23 +6,15 @@ function normalizeSiteUrl(url: string) {
 
 export const siteConfig = {
   name: "Accolyx",
-  title: "Accolyx | KSA IFRS 18 & Accounting Advisory",
+  title: "Accolyx | Accounting, IFRS, Audit & Cyber Security Advisory",
   description:
-    "Accolyx provides KSA-focused IFRS 18 readiness, accounting, advisory, internal audit, IT audit, and cyber security support for businesses in Saudi Arabia.",
+    "Accolyx provides focused accounting, IFRS, advisory, internal audit, IT audit, and cyber security support for businesses that need clearer financial decisions.",
   url: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || fallbackSiteUrl),
   email: "info@accolyx.com",
   logoPath: "/brand/accolyx-mark.png",
   ogImagePath: "/brand/accolyx-og.png",
-  locale: "en_SA",
+  locale: "en_US",
   keywords: [
-    "KSA IFRS 18",
-    "IFRS 18 Saudi Arabia",
-    "IFRS 18 KSA advisory",
-    "SOCPA IFRS 18",
-    "IFRS 18 implementation Saudi Arabia",
-    "IFRS 18 readiness",
-    "Saudi Arabia IFRS advisory",
-    "KSA accounting advisory",
     "accounting services",
     "IFRS advisory",
     "financial reporting support",
@@ -43,12 +35,7 @@ export const siteConfig = {
     {
       name: "IFRS",
       description:
-        "IFRS 18 readiness, technical accounting, disclosure support, and financial statement preparation.",
-    },
-    {
-      name: "KSA IFRS 18 Readiness",
-      description:
-        "Saudi Arabia-focused IFRS 18 transition planning, SOCPA-endorsed IFRS review, statement presentation, and disclosure support.",
+        "Technical accounting, disclosure support, and financial statement preparation.",
     },
     {
       name: "Advisory",
