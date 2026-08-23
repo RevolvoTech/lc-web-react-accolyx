@@ -104,7 +104,6 @@ const structuredData = {
       },
       image: absoluteUrl(siteConfig.logoPath),
       email: siteConfig.email,
-      address: siteConfig.postalAddress,
       description: siteConfig.description,
     },
     {
@@ -126,7 +125,6 @@ const structuredData = {
       image: absoluteUrl(siteConfig.logoPath),
       logo: absoluteUrl(siteConfig.logoPath),
       email: siteConfig.email,
-      address: siteConfig.postalAddress,
       description: siteConfig.description,
       knowsAbout: siteConfig.keywords,
       hasOfferCatalog: {
@@ -378,11 +376,6 @@ export default function Home() {
                 info@accolyx.com
                 <ArrowUpRight aria-hidden="true" size={18} strokeWidth={2} />
               </a>
-              <address className="contactAddress" aria-label="Accolyx office address">
-                {siteConfig.addressLines.map((line) => (
-                  <span key={line}>{line}</span>
-                ))}
-              </address>
             </div>
           </div>
 
@@ -402,7 +395,6 @@ export default function Home() {
             <span className="brandName">accolyx</span>
           </a>
           <p>Accounting, audit, advisory, and technology risk.</p>
-          <p className="footerAddress">{siteConfig.address}</p>
           <p>© {new Date().getFullYear()} Accolyx.</p>
         </div>
       </footer>

@@ -640,19 +640,6 @@ h2 {
   gap: 18px;
 }
 
-.contactAddress {
-  color: #b9beb8;
-  font-size: 0.92rem;
-  font-style: normal;
-  line-height: 1.7;
-  margin: 0;
-  max-width: 500px;
-}
-
-.contactAddress span {
-  display: block;
-}
-
 .contactForm {
   background: var(--surface);
   color: var(--ink);
@@ -746,10 +733,6 @@ h2 {
   color: #8f958e;
   font-size: 0.78rem;
   margin-bottom: 0;
-}
-
-.footerAddress {
-  line-height: 1.7;
 }
 
 @media (max-width: 980px) {

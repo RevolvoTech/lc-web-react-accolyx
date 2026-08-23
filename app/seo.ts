@@ -11,20 +11,6 @@ export const siteConfig = {
     "Accolyx provides focused accounting, IFRS, advisory, internal audit, IT audit, and cyber security support for businesses that need clearer financial decisions.",
   url: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || fallbackSiteUrl),
   email: "info@accolyx.com",
-  address:
-    "2nd Floor, Central Mall, opposite Giga Mall, GT Road, DHA PHASE 02 Islamabad 44000.",
-  addressLines: [
-    "2nd Floor, Central Mall, opposite Giga Mall, GT Road, DHA PHASE 02",
-    "Islamabad 44000",
-  ],
-  postalAddress: {
-    "@type": "PostalAddress",
-    streetAddress:
-      "2nd Floor, Central Mall, opposite Giga Mall, GT Road, DHA PHASE 02",
-    addressLocality: "Islamabad",
-    postalCode: "44000",
-    addressCountry: "PK",
-  },
   logoPath: "/brand/accolyx-mark.png",
   ogImagePath: "/brand/accolyx-og.png",
   locale: "en_US",
