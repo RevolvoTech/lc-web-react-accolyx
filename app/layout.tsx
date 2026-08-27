@@ -1,6 +1,13 @@
 import type { Metadata, Viewport } from "next";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "./seo";
+
+const geist = Geist({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-geist",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -16,7 +23,7 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   category: "Business services",
   classification:
-    "Accounting, IFRS, advisory, internal audit, IT audit, cyber security",
+    "IT audit, consultancy, internal audit, accounting, reporting, outsourcing",
   alternates: {
     canonical: "/",
   },
@@ -41,7 +48,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImagePath,
         width: 1200,
         height: 630,
-        alt: "Accolyx accounting, audit, advisory, and technology risk services",
+        alt: "Accolyx IT audit, accounting, and outsourcing services",
       },
     ],
     locale: siteConfig.locale,
@@ -71,7 +78,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   colorScheme: "light",
-  themeColor: "#2e15fc",
+  themeColor: "#f5f4ef",
 };
 
 export default function RootLayout({
@@ -80,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={geist.variable}>
       <body>{children}</body>
     </html>
   );

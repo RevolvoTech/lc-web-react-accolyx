@@ -6,51 +6,37 @@ function normalizeSiteUrl(url: string) {
 
 export const siteConfig = {
   name: "Accolyx",
-  title: "Accolyx | Accounting, IFRS, Audit & Cyber Security Advisory",
+  title: "Accolyx | IT Audit, Accounting & Outsourcing",
   description:
-    "Accolyx provides focused accounting, IFRS, advisory, internal audit, IT audit, and cyber security support for businesses that need clearer financial decisions.",
+    "Accolyx provides IT audit and consultancy alongside audit, accounting, reporting, and finance outsourcing support for businesses that need clearer control and dependable information.",
   url: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || fallbackSiteUrl),
   email: "info@accolyx.com",
   logoPath: "/brand/accolyx-mark.png",
   ogImagePath: "/brand/accolyx-og.png",
   locale: "en_US",
   keywords: [
-    "accounting services",
+    "IT audit",
+    "IT audit consultancy",
+    "IT general controls review",
+    "cyber security advisory",
+    "internal audit",
+    "accounting outsourcing",
+    "bookkeeping services",
     "IFRS advisory",
     "financial reporting support",
-    "internal audit",
-    "IT audit",
-    "cyber security advisory",
     "management reporting",
-    "finance process review",
-    "controls review",
-    "technology risk",
+    "finance function outsourcing",
   ],
   services: [
     {
-      name: "Accounting",
+      name: "IT Audit & Consultancy",
       description:
-        "Month-end close, ledger review, reconciliations, and management reporting support.",
+        "IT general controls, cyber and access risk, systems assurance, control design, and remediation planning.",
     },
     {
-      name: "IFRS",
+      name: "Audit, Accounting & Outsourcing",
       description:
-        "Technical accounting, disclosure support, and financial statement preparation.",
-    },
-    {
-      name: "Advisory",
-      description:
-        "Finance process review, cash flow visibility, performance insight, and decision support.",
-    },
-    {
-      name: "Internal Audit",
-      description:
-        "Risk assessment, control testing, governance review, and practical action plans.",
-    },
-    {
-      name: "IT Audit & Cyber Security",
-      description:
-        "IT control review, access control assessment, cyber risk review, and remediation planning.",
+        "Internal audit, accounting and bookkeeping, IFRS and reporting support, and finance function outsourcing.",
     },
   ],
 };
