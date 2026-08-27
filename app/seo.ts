@@ -11,6 +11,12 @@ export const siteConfig = {
     "Accolyx provides IT audit and consultancy alongside audit, accounting, reporting, and finance outsourcing support for businesses that need clearer control and dependable information.",
   url: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || fallbackSiteUrl),
   email: "info@accolyx.com",
+  address: {
+    streetAddress: "182-184 High Street North",
+    addressLocality: "London",
+    postalCode: "E6 2JA",
+    addressCountry: "GB",
+  },
   logoPath: "/brand/accolyx-mark.png",
   ogImagePath: "/brand/accolyx-og.png",
   locale: "en_US",

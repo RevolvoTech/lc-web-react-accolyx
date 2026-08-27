@@ -1171,6 +1171,28 @@ h3 {
   font-size: 0.94rem;
 }
 
+.contactDetails {
+  display: grid;
+  justify-items: start;
+  gap: 20px;
+}
+
+.officeAddress {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 40ch;
+  color: rgba(255, 255, 255, 0.77);
+  font-size: 0.94rem;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.officeAddress svg {
+  flex: 0 0 auto;
+  margin-top: 3px;
+}
+
 .contactForm {
   position: relative;
   display: grid;

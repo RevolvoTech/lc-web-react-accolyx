@@ -3,6 +3,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   Layers3,
+  MapPin,
 } from "lucide-react";
 import ContactForm from "./contact-form";
 import CapabilityStrip from "./capability-strip";
@@ -129,6 +130,10 @@ const structuredData = {
       },
       image: absoluteUrl(siteConfig.logoPath),
       email: siteConfig.email,
+      address: {
+        "@type": "PostalAddress",
+        ...siteConfig.address,
+      },
       description: siteConfig.description,
     },
     {
@@ -148,6 +153,10 @@ const structuredData = {
       image: absoluteUrl(siteConfig.logoPath),
       logo: absoluteUrl(siteConfig.logoPath),
       email: siteConfig.email,
+      address: {
+        "@type": "PostalAddress",
+        ...siteConfig.address,
+      },
       description: siteConfig.description,
       knowsAbout: siteConfig.keywords,
       hasOfferCatalog: {
@@ -464,10 +473,19 @@ export default function Home() {
               Share the issue, the timing, and what is at stake. We will come
               back with a sensible first step and the right shape of support.
             </p>
-            <a className="emailLink" href={`mailto:${siteConfig.email}`}>
-              {siteConfig.email}
-              <ArrowUpRight aria-hidden="true" size={18} strokeWidth={2} />
-            </a>
+            <div className="contactDetails">
+              <a className="emailLink" href={`mailto:${siteConfig.email}`}>
+                {siteConfig.email}
+                <ArrowUpRight aria-hidden="true" size={18} strokeWidth={2} />
+              </a>
+              <address className="officeAddress">
+                <MapPin aria-hidden="true" size={18} strokeWidth={2} />
+                <span>
+                  {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality},
+                  {" "}{siteConfig.address.postalCode}, England
+                </span>
+              </address>
+            </div>
           </div>
           <ContactForm />
         </div>
