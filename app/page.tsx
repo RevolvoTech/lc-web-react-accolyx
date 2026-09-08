@@ -3,7 +3,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   Layers3,
-  MapPin,
 } from "lucide-react";
 import ContactForm from "./contact-form";
 import CapabilityStrip from "./capability-strip";
@@ -130,10 +129,6 @@ const structuredData = {
       },
       image: absoluteUrl(siteConfig.logoPath),
       email: siteConfig.email,
-      address: {
-        "@type": "PostalAddress",
-        ...siteConfig.address,
-      },
       description: siteConfig.description,
     },
     {
@@ -153,10 +148,6 @@ const structuredData = {
       image: absoluteUrl(siteConfig.logoPath),
       logo: absoluteUrl(siteConfig.logoPath),
       email: siteConfig.email,
-      address: {
-        "@type": "PostalAddress",
-        ...siteConfig.address,
-      },
       description: siteConfig.description,
       knowsAbout: siteConfig.keywords,
       hasOfferCatalog: {
@@ -478,13 +469,6 @@ export default function Home() {
                 {siteConfig.email}
                 <ArrowUpRight aria-hidden="true" size={18} strokeWidth={2} />
               </a>
-              <address className="officeAddress">
-                <MapPin aria-hidden="true" size={18} strokeWidth={2} />
-                <span>
-                  {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality},
-                  {" "}{siteConfig.address.postalCode}, England
-                </span>
-              </address>
             </div>
           </div>
           <ContactForm />

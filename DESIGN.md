@@ -131,8 +131,7 @@ Use **Discuss your priorities** consistently for the main CTA. The form action u
 ### 6.5 Contact details
 
 - Email: **info@accolyx.com**
-- Address: **182-184 High Street North, London, E6 2JA, England**
-- Show the address alongside the direct email in the contact section and keep structured business data aligned with it.
+- Show the direct email in the contact section and keep structured business data aligned with it.
 
 ## 7. Layout system
 
